@@ -1,0 +1,80 @@
+body {
+    color: rgb(195, 195, 195);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(fondo.jpg);
+    overflow: hidden;
+  }
+  
+  .container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #title {
+    font-size: 24px;
+    color: rgb(222, 247, 3);
+    animation: jump 1.5s ease-in-out infinite alternate;
+  }
+  
+  #message {
+    font-size: 18px;
+    color: white;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+      font-size: 38px;
+    }
+  }
+  
+  .star {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-image: url('estrella.png');
+    background-size: cover;
+    animation: star 7s ease-in infinite;
+  }
+  
+  .star:nth-child(1) {
+    top: 0;
+    left: -70px;
+  }
+  
+  .star:nth-child(2) {
+    top: -70px;
+    left: calc(50% - 20px);
+  }
+  
+  .star:nth-child(3) {
+    top: calc(50% - 20px);
+    left: 100%;
+  }
+  
+  .star:nth-child(4) {
+    bottom: -70px;
+    left: calc(50% - 20px);
+  }
+  
+  .star:nth-child(5) {
+    left: -70px;
+    bottom: 0;
+  }
+  
+  @keyframes star {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-200vw, 200vh);
+    }
+  }
+  
